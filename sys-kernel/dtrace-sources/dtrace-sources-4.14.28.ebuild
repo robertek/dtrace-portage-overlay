@@ -15,6 +15,9 @@ IUSE="+header-link"
 KEYWORDS="~amd64"
 RDEPEND="sys-kernel/linux-headers dev-libs/elfutils dev-libs/libdtrace-ctf"
 
+# epatch deletes empty files, which breaks build
+EPATCH_COMMON_OPTS="-g0 --no-backup-if-mismatch"
+
 # head for 4.14.21 2018/3/5
 HEAD="547e93daabfdfed3ff9ce89611856842c3080176"
 CONFIG="v4.14.26-1"
