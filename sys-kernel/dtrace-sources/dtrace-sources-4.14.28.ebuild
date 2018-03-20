@@ -27,7 +27,8 @@ SNAP_URI="${ORAGIT}?p=dtrace-linux-kernel.git;a=snapshot;sf=tgz;h=${HEAD}"
 CONFIG_URI="${ORAGIT}?p=linux-uek5.git;a=blob_plain;f=uek-rpm/ol7/config-x86_64;hb=${CONFIG}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-${HEAD}.patch.xz"
+	epatch "${FILESDIR}/${PN}-${HEAD}.patch"
+	epatch "${FILESDIR}/dwarf2ctf_allow_root.patch"
 
 	cp ${FILESDIR}/uek5-config ${S}/.config
 	epatch "${FILESDIR}/uek5-config.patch"
