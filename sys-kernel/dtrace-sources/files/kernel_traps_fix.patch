@@ -1,0 +1,10 @@
+--- a/arch/x86/kernel/traps.c
++++ b/arch/x86/kernel/traps.c
+@@ -571,6 +571,7 @@ do_general_protection(struct pt_regs *regs, long error_code)
+ }
+ NOKPROBE_SYMBOL(do_general_protection);
+ 
++/* May run on IST stack. */
+ dotraplinkage void notrace do_int3(struct pt_regs *regs, long error_code)
+ {
+ #ifdef CONFIG_DYNAMIC_FTRACE
