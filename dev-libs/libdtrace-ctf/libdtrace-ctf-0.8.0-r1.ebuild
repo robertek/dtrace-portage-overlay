@@ -4,8 +4,8 @@
 EAPI=6
 
 DESCRIPTION="CTF library"
-HOMEPAGE="https://oss.oracle.com"
-SRC_URI="https://oss.oracle.com/git/gitweb.cgi?p=$PN.git;a=snapshot;sf=tgz;h=refs/tags/$P -> $P.tar.gz"
+HOMEPAGE="https://github.com/oracle/libdtrace-ctf"
+SRC_URI="https://github.com/oracle/${PN}/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
