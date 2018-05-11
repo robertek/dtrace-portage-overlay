@@ -6,8 +6,8 @@ EAPI=6
 MINOR=8
 
 DESCRIPTION="DTrace userspace"
-HOMEPAGE="https://oss.oracle.com"
-SRC_URI="https://oss.oracle.com/git/gitweb.cgi?p=dtrace-utils.git;a=snapshot;sf=tgz;h=refs/tags/${PN}-${PV}-${MINOR} -> $P.tar.gz"
+HOMEPAGE="https://github.com/oracle/dtrace-utils"
+SRC_URI="https://github.com/oracle/dtrace-utils/archive/${P}-${MINOR}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
